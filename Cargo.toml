@@ -1,0 +1,18 @@
+[package]
+name = "screen-pointer"
+version = "0.1.0"
+authors = [ "Amarantheum <kougharagua@gmail.com>" ]
+edition = "2018"
+
+[lib]
+name = "screen_pointer"
+crate-type = ["cdylib"]
+
+[dependencies]
+median = { git = "https://github.com/Cycling74/median" }
+parking_lot = "0.12"
+rand = "0.8.4"
+
+[profile.release]
+lto = true
+panic = "abort"
